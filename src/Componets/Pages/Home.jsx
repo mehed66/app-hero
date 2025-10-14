@@ -1,9 +1,10 @@
 import React from "react";
 import { useLoaderData } from "react-router";
+import AppsDataCard from "./AppsDataCard";
 
 const Home = () => {
   const appDatas = useLoaderData()
-  console.log(appDatas)
+  // console.log(appDatas)
   return (
     <div className="bg-[#D2D2D2]">
       <h1 className="text-4xl font-bold text-center pt-8 ">
@@ -59,8 +60,10 @@ const Home = () => {
         <h1>Trending Apps</h1>
         <p>Explore All Trending Apps on the Market developed by us</p>
         {
-          appDatas.map(appData => {
-          <h1>{appData.title}</h1>
+          appDatas.map(appInfo => {
+            // <h1>{appInfo.companyName}</h1>
+            <AppsDataCard key={appInfo.id} appInfo = {appInfo}></AppsDataCard>
+          console.log(appInfo.companyName);
         })
         }
       </div>
