@@ -1,25 +1,25 @@
 import React from "react";
-
+import { FaStar } from "react-icons/fa6";
+import { FaArrowDown } from "react-icons/fa";
 const AppsDataCard = ({appInfo}) => {
-     console.log(appInfo);
      
-     const {image,title,size} = appInfo;
+     const {image,description} = appInfo;
   return (
     <div>
-      <div className="card bg-base-100 w-96 shadow-sm">
-        <figure>
+      <div className="card bg-base-100 w-[290px] border shadow-sm hover:scale-105 transition ease-in-out">
+        <figure className="h-48 overflow-hidden">
           <img
+          className="mt-20 w-full object-cover"
             src={image}
             alt="Shoes"
           />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{title}</h2>
-          <p>
-           {size}
-          </p>
-          <div className="card-actions justify-end">
-            <button className="btn btn-primary">Buy Now</button>
+          <h2 className="card-title">{description}</h2>
+          
+          <div className="card-actions justify-between">
+            <button className="btn bg-[#F1F5E8] text-green-500"><FaArrowDown />9M</button>
+            <button className="btn bg-[#FFF0E1] text-[#FF8811]"><FaStar />5</button>
           </div>
         </div>
       </div>

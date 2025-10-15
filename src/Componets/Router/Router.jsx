@@ -20,7 +20,8 @@ import Installation from "../Pages/Installation";
      },
      {
           path: '/apps',
-          Component : Apps
+          Component : Apps,
+          loader: () => fetch('./appData.json')
      },
      {
           path: '/installation',

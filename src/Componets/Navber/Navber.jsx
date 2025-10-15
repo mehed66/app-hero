@@ -40,8 +40,11 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <img className="w-10 mr-5" src={logo} alt="" />
-          <a className="btn-ghost  text-[#632EE3] font-bold">HERO.IO</a>
+          <div >
+            <NavLink className="flex items-center" to="/"><img className="w-10 mr-5" src={logo} alt="" />
+          <span className="btn-ghost  text-[#632EE3] font-bold">HERO.IO</span></NavLink>
+            
+          </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
@@ -57,7 +60,7 @@ const Navber = () => {
           </ul>
         </div>
         <div className="navbar-end ">
-          <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">
+          <a href="https://github.com/mehed66" className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">
             <FaGithub /> Contribute
           </a>
         </div>
