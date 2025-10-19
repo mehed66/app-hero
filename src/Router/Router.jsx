@@ -26,6 +26,7 @@ import Root from "../Root/Root";
      },
      {
           path: '/installation',
+          loader: () => fetch('/appData.json'),
           Component : Installation
      },
      {

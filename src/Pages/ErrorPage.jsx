@@ -1,12 +1,10 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import img from "./error-404.png";
 import Navbar from "../Componets/Navber/Navber";
 import Footer from "../Componets/Footer/Footer"
 
 
 const ErrorPage = () => {
-  const navigate = useNavigate();
 
   return (
      <div>
@@ -24,10 +22,9 @@ const ErrorPage = () => {
         The page you are looking for doesn’t exist or has been moved.
       </p>
       <button
-        onClick={() => navigate(-1)}
+       
         className="bg-fuchsia-700 text-white px-6 py-2 rounded-xl text-sm md:text-base hover:bg-fuchsia-800 transition-all"
       >
-        Go Back
       </button>
     </div>
     <Footer></Footer>

@@ -6,6 +6,7 @@ import { SlLike } from "react-icons/sl";
 import Rating from "./Rating";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { addtoStorageData } from "../LocalStorge/loaclSroge";
 
 const AppDetails = () => {
   const { id } = useParams();
@@ -15,7 +16,8 @@ const AppDetails = () => {
 
   const [installed, setInstalled] = useState(false);
 
-  const handleInstall = () => {
+  const handleInstall = (id) => {
+    addtoStorageData(id);
     if (!installed) {
       setInstalled(true);
       toast.success("App Installed Successfully!");
@@ -69,7 +71,7 @@ const AppDetails = () => {
             </div>
             <div className="flex justify-center md:justify-start">
               <button
-                onClick={handleInstall}
+                onClick={()=>handleInstall(id)}
                 className={`btn ${
                   installed ? "bg-green-500" : "bg-green-600"
                 } text-white`}

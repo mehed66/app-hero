@@ -7,7 +7,6 @@ import {
   CartesianGrid,
 } from "recharts";
 const Rating = ({ ratings }) => {
-  console.log(ratings);
 
   return (
     <div className=" md:p-0 p-4">
