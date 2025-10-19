@@ -40,27 +40,44 @@ const Navber = () => {
               </li>
             </ul>
           </div>
-          <div >
-            <NavLink className="flex items-center" to="/"><img className="w-10 mr-5" src={logo} alt="" />
-          <span className="btn-ghost  text-[#632EE3] font-bold">HERO.IO</span></NavLink>
-            
+          <div>
+            <NavLink className="flex items-center" to="/">
+              <img className="w-10 mr-5" src={logo} alt="" />
+              <span className="btn-ghost  text-[#632EE3] font-bold">
+                HERO.IO
+              </span>
+            </NavLink>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <NavLink to="/">Home</NavLink>
+              <NavLink
+                className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "border border-b-fuchsia-700" : ""
+                }
+                to="/"
+              >
+                Home
+              </NavLink>
             </li>
             <li>
-              <NavLink to="/apps">Apps</NavLink>
+              <NavLink className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "border border-b-fuchsia-700" : ""
+                } to="/apps">Apps</NavLink>
             </li>
             <li>
-              <NavLink to="/installation">Installation</NavLink>
+              <NavLink className={({ isActive, isPending }) =>
+                  isPending ? "pending" : isActive ? "border border-b-fuchsia-700" : ""
+                } to="/installation">Installation</NavLink>
             </li>
           </ul>
         </div>
         <div className="navbar-end ">
-          <a href="https://github.com/mehed66" className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white">
+          <a
+            href="https://github.com/mehed66"
+            className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-white"
+          >
             <FaGithub /> Contribute
           </a>
         </div>

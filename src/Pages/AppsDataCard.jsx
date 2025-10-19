@@ -6,7 +6,7 @@ const AppsDataCard = ({appInfo}) => {
      const {image,description} = appInfo;
   return (
     <div>
-      <div className="card bg-base-100 w-[290px] border shadow-sm hover:scale-105 transition ease-in-out">
+      <div className="card bg-base-100  border shadow-sm hover:scale-105 transition ease-in-out">
         <figure className="h-48 overflow-hidden">
           <img
           className="mt-20 w-full object-cover"

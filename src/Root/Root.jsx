@@ -1,11 +1,11 @@
 import React from 'react';
-import Navber from '../Navber/Navber';
+import Navber from '../Componets/Navber/Navber';
 import { Outlet } from 'react-router';
-import Footer from '../Footer/Footer';
+import Footer from '../Componets/Footer/Footer';
 
 const Root = () => {
      return (
-          <div className='flex flex-col min-h-screen'>
+          <div className='max-w-6xl mx-auto'>
                 <Navber></Navber>
               <div className=' flex-1'>
                 <Outlet></Outlet>
