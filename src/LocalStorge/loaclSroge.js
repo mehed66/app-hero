@@ -25,3 +25,8 @@ export const addtoStorageData = (id) =>{
      }
 
 }
+export const removeFromStorage = (id) => {
+  const storedData = getStorageData();
+  const remaining = storedData.filter((itemId) => itemId !== id.toString());
+  localStorage.setItem("added-to-cart", JSON.stringify(remaining));
+};

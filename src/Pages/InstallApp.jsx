@@ -2,13 +2,12 @@ import React from "react";
 import { FaStar } from "react-icons/fa6";
 import { FaArrowDown } from "react-icons/fa";
 
-const InstallApp = ({ card }) => {
-  const { image, description } = card;
+const InstallApp = ({ card, handleUninstall }) => {
+  const { id, image, description } = card;
 
   return (
-    <div className="card border-gray-200 border-1 shadow-sm   p-4">
-      <div className="flex flex-col sm:flex-row  sm:items-center sm:justify-between gap-4">
-     
+    <div className="card border-gray-200 border-1 shadow-sm p-4">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
           <figure className="h-40 w-full sm:w-32 overflow-hidden rounded-xl bg-gray-100 flex-shrink-0">
             <img
@@ -32,7 +31,10 @@ const InstallApp = ({ card }) => {
         </div>
 
         <div className="flex justify-center sm:justify-end">
-          <button className="bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-xl px-5 py-2 w-full sm:w-auto">
+          <button
+            onClick={() => handleUninstall(id)}
+            className="bg-green-500 hover:bg-green-600 text-white text-sm font-medium rounded-xl px-5 py-2 w-full sm:w-auto"
+          >
             Uninstall
           </button>
         </div>

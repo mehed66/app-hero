@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
-import { getStorageData } from "../LocalStorge/loaclSroge";
+import { getStorageData, removeFromStorage } from "../LocalStorge/loaclSroge";
 import InstallApp from "./InstallApp";
 
 const Installation = () => {
@@ -15,6 +15,11 @@ const Installation = () => {
     );
     setCards(filteredCards);
   }, [data]);
+
+  const handleUninstall = (id) => {
+    removeFromStorage(id); 
+    setCards((prev) => prev.filter((card) => card.id !== id)); 
+  };
 
   return (
     <div className="px-4 sm:px-8 lg:px-16 py-8">
@@ -31,10 +36,16 @@ const Installation = () => {
       </div>
 
       <div
-        className="space-y-7 md:space-y-3 "
+        className="
+        gap-4 sm:gap-6 md:gap-8
+      "
       >
         {cards.map((card) => (
-          <InstallApp key={card.id} card={card} />
+          <InstallApp
+            key={card.id}
+            card={card}
+            handleUninstall={handleUninstall}
+          />
         ))}
       </div>
     </div>
