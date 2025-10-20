@@ -1,16 +1,28 @@
-# React + Vite
+# 🌟 FocusFlow
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**FocusFlow** is a modern productivity app built with React that helps users stay focused using the Pomodoro technique.  
+It provides timer controls, daily focus statistics, and an elegant UI designed to reduce distractions and improve deep work sessions.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📝 Description
 
-## React Compiler
+FocusFlow combines science-backed productivity methods with a minimalist interface.  
+Users can customize work and break intervals, track completed sessions, and monitor progress over time.  
+All data is stored locally in the browser — no sign-in required.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🧰 Technologies Used
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+| Category | Tools / Libraries |
+|-----------|------------------|
+| **Frontend Framework** | React (Vite) |
+| **Routing** | React Router DOM |
+| **Styling** | Tailwind CSS |
+| **Icons** | React Icons |
+| **Notifications** | React Toastify |
+| **State Management** | useState, useEffect Hooks |
+| **Data Storage** | LocalStorage API |
+
+
