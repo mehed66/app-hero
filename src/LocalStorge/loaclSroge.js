@@ -17,6 +17,8 @@ export const addtoStorageData = (id) =>{
      else{
           storedAddData.push(id);
           const data = JSON.stringify(storedAddData);
+          console.log(data);
+          
           localStorage.setItem('added-to-cart', data);
           
           
